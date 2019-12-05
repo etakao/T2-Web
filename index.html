@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Task Panel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="header">
+        <h1>Task Panel</h1>
+        <button id="modal-btn">New Task</button>
+    </div>
+
+    <div id="modal-task" class="modal">
+        <div class="modal-body">
+            <div class="modal-header">
+                <b>New Task</b>
+            </div>
+            <div class="modal-content">
+                <p>Task</p>
+                <textarea id="task-ta" class="task-ta" cols="30" rows="1" autofocus></textarea>
+                <p>Description</p>
+                <textarea id="description-ta" class="description-ta" cols="30" rows="10"></textarea>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-alert" class="modal">
+        <div class="modal-ab">
+                <div class="modal-header">
+                    <b>Alert 
+                    <span class="close">X</span></b>
+                </div>
+                <div class="modal-content">
+                    <p>Fill all the blanks!</p>
+                </div>
+        </div>
+    </div>
+
+    <div class="progress-bar">
+        <div id="toDo-bar"></div>
+        <div id="inProgress-bar"></div>
+        <div id="review-bar"></div>
+        <div id="complete-bar"></div>
+    </div>
+
+    <div class="panel">
+        <div class="task-body first">
+            <div class="task-header td">
+                <h2>To do</h2>
+            </div>
+            <div id="to-do" class="task-content">
+                <div class="task">
+                    <b onClick="moveTaskForward(event)">Exame de ED II</b>
+                    <p>sad :(</p>
+                </div>
+            </div>
+        </div>
+        <div class="task-body">
+            <div class="task-header ip">
+                <h2>In progress</h2>
+            </div>
+            <div id="in-progress" class="task-content">
+            </div>
+        </div>
+        <div class="task-body">
+            <div class="task-header rw">
+                <h2>Review</h2>
+            </div>
+            <div id="review" class="task-content">
+                <div class="task">
+                    <b onClick="moveTaskForward(event)">Trabalho de PAA</b>
+                    <p>Entrega: Dezembro</p>
+                </div>
+            </div>
+        </div>
+        <div class="task-body">
+            <div class="task-header cp">
+                <h2>Complete</h2>
+            </div>
+            <div id="complete" class="task-content">
+                <div class="task">
+                    <b onClick="moveTaskForward(event)">Trabalho de Web/JS</b>
+                    <p>Entrega: Dezembro</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js">
+    </script>
+</body>
+
+</html>
